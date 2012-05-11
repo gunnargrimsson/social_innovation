@@ -4,8 +4,7 @@
   %tr
     %td{:valign => "top"}
       .add_talking_point
-        = tr("<h3>Add a talking point.</h3><p>What is the best argument for or against this idea?  Others will be able to edit it, and we keep a record of revisions, just like Wikipedia. Keep it concise and focused on just one point, you can add additional ones later.  Only the <span class=\"red\">\*</span> fields are required.</p>", "view/points/new")
-      %br/
+        = tr("<h3>Debate</h3><p>What is the best argument for or against this idea? Keep it concise and focused on just one point, you can add more later.</p>", "view/points/new")
       .form_header
         = tr("Add a point", "view/points/new")
         %span.red *
@@ -29,12 +28,13 @@
             = tr("Explain your point.", "view/points/new")
             %span#pointContentDown
             = tr("characters left", "view/points/new")
+            %span.red *
           .field_box
             = f.text_area :content, :id => 'pointContent', :button => 'submit', :rows => 5, :cols => 60, :maxLength => 500
         .tiny_info_no_pad= tr("Other people will be able to edit your points, similar to Wikipedia","views/ideas/form")
         %br/
         .field.form_header
-          .field_label= tr("Include a website source link", "view/points/new")
+          .field_label= tr("Link for more info", "view/points/new")
           .field_box
             = f.text_field :website, :size => 50
         %br/
